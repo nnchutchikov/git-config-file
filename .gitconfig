@@ -1,0 +1,41 @@
+[user]
+	name = nnchutchikov
+	email = nnchutchikov@gmail.com
+	signingkey = XXXXXXXXXXXXXXXX
+[credential]
+	helper = manager
+[gui]
+	fontdiff = -family \"Courier New\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	encoding = utf-8
+[core]
+	editor = notepad
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld $LOCAL $REMOTE
+[merge]
+	tool = meld
+	ff = false
+[mergetool "meld"]
+	cmd = meld $LOCAL $MERGED $REMOTE --output $MERGED
+[alias]
+	gd = !git difftool --dir-diff
+	go = checkout
+	b = branch
+	all = branch -a
+	new = checkout -b
+	del = branch -D
+	uMaster = "!f() { \
+		git go master; \
+		git merge --no-ff dev; \
+	}; f" 
+[difftool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+[gpg]
+	program = c:/Program Files (x86)/GnuPG/bin/gpg.exe
+[commit]
+	gpgsign = true
+[color]
+	ui = auto
