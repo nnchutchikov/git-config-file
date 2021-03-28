@@ -9,6 +9,8 @@
 	encoding = utf-8
 [core]
 	editor = notepad
+	eol = lf
+	autocrlf = false
 [diff]
 	tool = meld
 [difftool]
